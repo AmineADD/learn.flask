@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"> 
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/index.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename = 'js/fetch.js') }}"></script>
+
+  <title>Cars page</title>
+</head>
+
+<body>
+
+  <div>
+    <div id="container">
+      <div name="form">
+        <h1>Form cars</h1>
+        <h6>Search by brand , model  or power</h6>
+        <input type="text" id="brand" required class="search-box" placeholder="Brand" />
+        <input type="text" id="model" required class="search-box" placeholder="Model" /> 
+        <input type="number" id="power" required class="search-box" placeholder="Power" />
+
+      </div>
+      <div name="Buttons">
+        <button id="add" class="search-box" name="ADD" onclick="addCar()"><span class="icon-info">ADD</span></button>
+        <button id="recherche" class="search-box" name="Update" onclick="rechercheTable()">Search</button>
+        <button id="reset" class="search-box" name="reset" onclick="resetTable()">reset</button>
+      </div>
+    </div>
+    <div name="table">
+      <table>
+        <caption>List cars</caption>
+        <thead>
+          <tr>
+            <th scope="col">Brand</th>
+            <th scope="col">Model</th>
+            <th scope="col">Power</th>
+            <th scope="col">ACTIONS</th>
+
+          </tr>
+        </thead>
+        <tbody id="table_body">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
